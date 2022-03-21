@@ -6,6 +6,8 @@
 
 * [Creating a REST API using Django Rest Framework](https://www.ginkgobioworks.com/2021/02/04/creating-a-rest-api-using-django-rest-framework/)
 
+* [Criando Uma API Rest Utilizando Django Rest Framework](https://medium.com/@marcosrabaioli/criando-uma-api-rest-utilizando-django-rest-framework-parte-1-55ac3e394fa)
+
 ```zsh
 sudo apt update
 sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
