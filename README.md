@@ -39,3 +39,12 @@ django-admin startproject gplaysbackend .
 # Já feito! Não é necessário repetir!
 ```
 
+```zsh
+django-admin startapp gplaysapi .
+# Já feito! Não é necessário repetir!
+```
+
+```zsh
+cd gplays-backend
+python manage.py runserver
+```
