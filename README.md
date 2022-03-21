@@ -9,6 +9,10 @@
 * [Criando Uma API Rest Utilizando Django Rest Framework](https://medium.com/@marcosrabaioli/criando-uma-api-rest-utilizando-django-rest-framework-parte-1-55ac3e394fa)
 
 ```zsh
+ssh -i .\gplays-ics_key.pem gplays@20.206.77.14
+```
+Dentro do diretório do repositório.
+```zsh
 sudo apt update
 sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
 ```
