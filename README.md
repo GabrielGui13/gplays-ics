@@ -35,12 +35,22 @@ pip install djangorestframework
 ```
 
 ```zsh
+# WSL2
 django-admin startproject gplaysbackend .
+
+# Windows
+python manage.py startproject gplaysbackend .
+
 # Já feito! Não é necessário repetir!
 ```
 
 ```zsh
+# WSL2
 django-admin startapp gplaysapi .
+
+# Windows
+python manage.py startapp gplaysapi .
+
 # Já feito! Não é necessário repetir!
 ```
 
