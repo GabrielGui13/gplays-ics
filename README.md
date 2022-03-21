@@ -12,6 +12,10 @@ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib
 ```
 ## Django
 
+Por algum motivo, no WSL2, se tiver o modulo 'rest_framework' ele nao funciona.
+
+OBS: Ja ajeitei eu sou burro.
+
 ```zsh
 sudo -H pip3 install --upgrade pip
 sudo -H pip3 install virtualenv
