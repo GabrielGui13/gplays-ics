@@ -26,19 +26,23 @@ OBS: Ja ajeitei eu sou burro.
 sudo -H pip3 install --upgrade pip
 sudo -H pip3 install virtualenv
 ```
+Instalar dependências para criar e gerenciar o projeto na vm.
 
 ```zsh
 virtualenv gplays-env
 ```
+Ao entrar no diretório do repositório, se não houver uma pasta chamada 'gplays-env' no diretório raiz, deve-se dar esse comando para criar o ambiente virtual Python.
 
 ```zsh
 source gplays-env/bin/activate
 ```
+Esse comando faz a conexão ao virtualenv do Python
 
 ```zsh
 pip install django 
 pip install djangorestframework
 ```
+Esses passos devem ser dados ao conectar-se no virtual env, provavelmente aparecerá: (gplays-env) gplays@gplays-ics:~/gplays-ics/gplays-backend$ , assim você saberá que está conectado.
 
 ```zsh
 # WSL2
@@ -49,6 +53,8 @@ python manage.py startproject gplaysbackend .
 
 # Já feito! Não é necessário repetir!
 ```
+Esses passos servem para criar a base do projeto django, já está feito no repositório e não deve ser repetido.
+OBS: Está dentro da pasta 'gplays-backend'
 
 ```zsh
 # WSL2
@@ -59,8 +65,11 @@ python manage.py startapp gplaysapi .
 
 # Já feito! Não é necessário repetir!
 ```
+Esses passos servem para criar 0 projeto django em si, já está feito no repositório e não deve ser repetido.
+OBS: Está dentro da pasta 'gplays-backend'
 
 ```zsh
 cd gplays-backend
-python manage.py runserver
+python3 manage.py runserver
 ```
+Esses passos são para entrar na pasta do projeto django e rodar ele.
