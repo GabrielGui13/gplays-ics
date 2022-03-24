@@ -14,15 +14,17 @@
         font-family: sans-serif;
       }
       header {
-        background-color: #ff315d;
+        border-bottom: 1px solid #ff315d;
         border-radius: 3px;
         text-align: center;
+        color: #ff315d;
       }
+
       body {
         background-repeat: no-repeat;
         background-position: center;
         height: 100vh;
-        background-color: black;
+        background-color: #1c1a1e;
       }
 
       #tabela {
@@ -62,6 +64,17 @@
         font-weight: bold;
         color: black;
       }
+
+      .botao {
+        border-radius: 5px;
+        border: 2px solid #ff315d;
+        background-color: transparent;
+        outline: none;
+        color: white;
+        padding: 5px 8px 5px 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     </style>
 
     <header>
@@ -95,6 +108,11 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div id="divb">
+        <input type="button" class="botao" value="Adicionar" />
+        <input type="button" class="botao" value="Apagar" />
+        <input type="button" class="botao" value="Editar" />
       </div>
     </div>
   </body>
