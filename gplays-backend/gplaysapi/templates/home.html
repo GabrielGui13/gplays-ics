@@ -81,6 +81,14 @@
             </tr>
           </thead>
           <tbody>
+            {% for usuario in usuarios %}
+              <tr>
+                <td>{{usuario.Nome}}</td>
+                <td>{{usuario.Idade}}</td>
+                <td>{{usuario.Apelido}}</td>
+                <td>{{usuario.Cargo}}</td>
+              </tr>
+            {% endfor %}
             <tr>
               <td>Dom</td>
               <td>6000</td>

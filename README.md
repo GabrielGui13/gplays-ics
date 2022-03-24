@@ -73,3 +73,9 @@ cd gplays-backend
 python3 manage.py runserver
 ```
 Esses passos são para entrar na pasta do projeto django e rodar ele.
+
+```zsh
+manage.py makemigrations
+manage.py migrate
+```
+Migration.
