@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
+    <title>GPLAYS</title>
 
     <style>
       * {
@@ -13,6 +13,7 @@
         box-sizing: border-box;
         font-family: sans-serif;
       }
+
       header {
         border-bottom: 1px solid #ff315d;
         border-radius: 3px;
@@ -74,6 +75,20 @@
         padding: 5px 8px 5px 8px;
         margin-left: 10px;
         margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .botao a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .table-buttons {
+        display: flex;
+      }
+
+      .table-buttons .botao a {
+        color: black;
       }
     </style>
 
@@ -91,6 +106,7 @@
               <th>Idade</th>
               <th>Apelido</th>
               <th>Cargo</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -100,27 +116,23 @@
                 <td>{{usuario.Idade}}</td>
                 <td>{{usuario.Apelido}}</td>
                 <td>{{usuario.Cargo}}</td>
+                <td class="table-buttons">
+                  <button class="botao">
+                    <a href="/edit/{{usuario.id}}">Editar</a>
+                  </button>
+                  <button class="botao">
+                    <a href="/delete/{{usuario.id}}">Apagar</a>
+                  </button>
+                </td>
               </tr>
             {% endfor %}
-            <tr>
-              <td>Dom</td>
-              <td>6000</td>
-              <td>6000</td>
-              <td>6000</td>
-            </tr>
-            <tr class="active-row">
-              <td>Melissa</td>
-              <td>5150</td>
-              <td>5150</td>
-              <td>5150</td>
-            </tr>
           </tbody>
         </table>
       </div>
       <div id="divb">
-        <input type="button" class="botao" value="Adicionar" />
-        <input type="button" class="botao" value="Apagar" />
-        <input type="button" class="botao" value="Editar" />
+        <button class="botao">
+          <a href="/create">Adicionar novo usuario</a>
+        </button>
       </div>
     </div>
   </body>

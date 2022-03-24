@@ -11,4 +11,6 @@ def home(request):
     context = {'usuarios': usuarios}
     return render(request, 'home.html', context)
 
-
+def create(request):
+    data={}
+    return render(request, 'create.html', data)
