@@ -15,17 +15,23 @@
       }
 
       header {
-        border-bottom: 1px solid #ff315d;
-        border-radius: 3px;
+        border-bottom: 2px solid #ff315d;
         text-align: center;
         color: #ff315d;
+        background:#1c1a1e;
+      }
+
+      .logo img {
+        max-height: 40px;
+        width:auto;
+        margin:5px;
       }
 
       body {
-        background-repeat: no-repeat;
-        background-position: center;
         height: 100vh;
-        background-color: #1c1a1e;
+        opacity: 1;
+        background-size: 8px 8px;
+        background-image: repeating-linear-gradient(45deg, #382428 0, #382428 0.8px, #1c1a1e 0, #1c1a1e 50%);
       }
 
       #tabela {
@@ -45,11 +51,15 @@
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         max-width: 400px;
+        overflow: hidden;
+        border-radius:8px;
+        box-shadow: 0px 0px 0px 2px #ff315d inset;
+        background:#1c1a1e;
       }
 
       .styled-table thead tr {
-        background-color: #ff315d;
-        color: #ffffff;
+        background:#ff315d;
+        color: #1c1a1e;
         text-align: left;
       }
 
@@ -59,28 +69,43 @@
       }
 
       .styled-table tbody tr {
-        border-bottom: 1px solid #dddddd;
-        background-color: #f3f3f3;
-        border-bottom: 2px solid #ff315d;
+        background: transparent;
         font-weight: bold;
-        color: black;
+        color: #ff315d;
       }
+
+      .styled-table tbody {
+        background: transparent;
+        font-weight: bold;
+      }
+
 
       .botao {
         border-radius: 5px;
         border: 2px solid #ff315d;
-        background-color: transparent;
+        background-color: #1c1a1e;
         outline: none;
         color: white;
         padding: 5px 8px 5px 8px;
         margin-left: 10px;
         margin-right: 10px;
         cursor: pointer;
+        transition: border 0.5s ease;
+      }
+
+      .botao:hover {
+        border:2px solid #fda9bb;
+      }
+
+      .botao:hover a {
+        color: #fda9bb;
       }
 
       .botao a {
         text-decoration: none;
-        color: white;
+        color: #ff315d;
+        font-weight: bold;
+        transition: color 0.5s ease;
       }
 
       .table-buttons {
@@ -88,12 +113,21 @@
       }
 
       .table-buttons .botao a {
-        color: black;
+        color: #ff315d;
+        font-weight: bold;
+        transition: color 0.5s ease;
       }
+
+      .table-buttons .botao:hover a {
+        color: #fda9bb;
+      }
+      
     </style>
 
     <header>
-      <h1>GPLAYS</h1>
+      <div class="logo">
+        <img src="https://i.imgur.com/rF3bLoo.png">
+      </div>
     </header>
   </head>
   <body>

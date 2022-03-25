@@ -15,35 +15,54 @@
       }
 
       header {
-        border-bottom: 1px solid #ff315d;
-        border-radius: 3px;
+        border-bottom: 2px solid #ff315d;
         text-align: center;
         color: #ff315d;
+        background:#1c1a1e;
       }
 
+      .logo img {
+        max-height: 40px;
+        width:auto;
+        margin:5px;
+      }
+
+
       body {
-        background-repeat: no-repeat;
-        background-position: center;
         height: 100vh;
-        background-color: #1c1a1e;
+        opacity: 1;
+        background-size: 8px 8px;
+        background-image: repeating-linear-gradient(45deg, #382428 0, #382428 0.8px, #1c1a1e 0, #1c1a1e 50%);
       }
 
       .botao {
         border-radius: 5px;
         border: 2px solid #ff315d;
-        background-color: transparent;
+        background-color: #1c1a1e;
         outline: none;
-        color: white;
+        color: #ff315d;
         padding: 5px 8px 5px 8px;
         margin-left: 10px;
         margin-right: 10px;
         width: 70px;
         cursor: pointer;
+        font-weight:bold;
+        transition: border 0.5s ease, color 0.5s ease;
+      }
+
+      .botao:hover {
+        border:2px solid #fda9bb;
+        color: #fda9bb;
+      }
+
+      .botao:hover a{
+        color:#fda9bb;
       }
 
       .botao a {
         text-decoration: none;
-        color: white;
+        color: #ff315d;
+        transition: color 0.5s ease;
       }
 
       #divc {
@@ -52,6 +71,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 20%;
+        flex-direction: column;
       }
 
       h2 {
@@ -59,22 +79,27 @@
       }
 
       #botoes {
+        display:flex;
+        flex-direction: row;
+        margin-top:40px;
       }
     </style>
     <header>
-      <h1>GPLAYS</h1>
+      <div class="logo">
+        <img src="https://i.imgur.com/rF3bLoo.png">
+      </div>
     </header>
   </head>
   <body>
     <div id="divc">
-      <h2>Você gostaria de apagar {{usuario.Nome}}, o {{usuario.Apelido}}? O primeiro {{usuario.Cargo}} aos {{usuario.Idade}} anos?</h2>
-      <div id=" botoes">
+      <h2>Você gostaria de apagar <span style="color:#ff315d">{{usuario.Nome}}</span>, o <span style="color:#ff315d">{{usuario.Apelido}}</span>? O primeiro <span style="color:#ff315d">{{usuario.Cargo}}</span> aos <span style="color:#ff315d">{{usuario.Idade}}</span> anos?</h2>
+      <div id="botoes">
         <form action='../../deleteindb/{{usuario.id}}/' method='POST'>
           {% csrf_token %}
           <input type="submit" class="botao" value="Sim" />
         </form>
         <button type class="botao">
-          <a href="">Nao</a>
+          <a href="">Não</a>
         </button>
       </div>
     </div>
