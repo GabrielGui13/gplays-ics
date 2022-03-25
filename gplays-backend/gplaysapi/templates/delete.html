@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create</title>
+    <title>Apagar {{usuario.Nome}}</title>
 
     <style>
       * {
@@ -38,7 +38,12 @@
         margin-left: 10px;
         margin-right: 10px;
         width: 70px;
-        height: px;
+        cursor: pointer;
+      }
+
+      .botao a {
+        text-decoration: none;
+        color: white;
       }
 
       #divc {
@@ -62,11 +67,15 @@
   </head>
   <body>
     <div id="divc">
-      <h2>Você gostaria de apagar?</h2>
+      <h2>Você gostaria de apagar {{usuario.Nome}}, o {{usuario.Apelido}}? O primeiro {{usuario.Cargo}} aos {{usuario.Idade}} anos?</h2>
       <div id=" botoes">
-        <input type="submit" class="botao" value="Sim" />
-
-        <input type="submit" class="botao" value="Não" />
+        <form action='../../deleteindb/{{usuario.id}}/' method='POST'>
+          {% csrf_token %}
+          <input type="submit" class="botao" value="Sim" />
+        </form>
+        <button type class="botao">
+          <a href="">Nao</a>
+        </button>
       </div>
     </div>
   </body>

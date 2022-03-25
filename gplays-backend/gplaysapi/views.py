@@ -35,5 +35,11 @@ def update(request, id):
 
 def delete(request, id):
   data = {}
+  data['usuario'] = Usuario.objects.get(id=id)
   return render(request, "delete.html", data)
+
+def deleteindb(request, id):
+    usuario = Usuario.objects.get(id=id)
+    usuario.delete()
+    return redirect('home')
 
