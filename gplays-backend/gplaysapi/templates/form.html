@@ -102,7 +102,7 @@
         <input type="text" id="form" name="Nome" value="{% if editdata %}{{editdata.Nome}}{% endif %}" /><br />
         <br />
         <label for="lidade">Idade:</label><br />
-        <input type="text" id="form" name="Idade" value="{% if editdata %}{{editdata.Idade}}{% endif %}"  /> <br />
+        <input type="number" min="0" max="9999" id="form" name="Idade" value="{% if editdata %}{{editdata.Idade}}{% endif %}"  /> <br />
         <br />
         <label for="lapelido">Apelido:</label><br />
         <input type="text" id="form" name="Apelido" value="{% if editdata %}{{editdata.Apelido}}{% endif %}"  /> <br />
