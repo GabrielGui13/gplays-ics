@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gmnjj=o#er33x^^t98fc49=!_5%^+p$o0iqh#t6e5q8hn13oy)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gplays.net']
 
 
 # Application definition
