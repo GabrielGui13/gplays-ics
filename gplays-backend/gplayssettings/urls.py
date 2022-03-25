@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gplaysapi.views import home, create, createindb, edit, update
+from gplaysapi.views import home, create, createindb, edit, update, delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +23,6 @@ urlpatterns = [
     path('create/', create, name='create'),
     path('createindb/', createindb, name='createindb'),
     path('edit/<int:id>/', edit, name='edit'),
-    path('update/<int:id>/', update, name='update')
+    path('update/<int:id>/', update, name='update'),
+    path("delete/<int:id>/", delete, name="delete")
 ]

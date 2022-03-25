@@ -32,3 +32,8 @@ def update(request, id):
     if usuario.is_valid():
         usuario.save()
         return redirect('home')
+
+def delete(request, id):
+  data = {}
+  return render(request, "delete.html", data)
+
