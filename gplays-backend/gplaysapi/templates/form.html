@@ -61,7 +61,17 @@
         border-radius: 7px;
         width: 300px;
         height: 28px;
+        outline: none;
+        background-color: transparent;
+        border: 2px solid #ff315d;
+        color: white;
+        margin-bottom: 5px;
       }
+      
+      label {
+        margin-bottom: 20px;
+      }
+
     </style>
     <header>
       <h1>GPLAYS</h1>
@@ -69,21 +79,22 @@
   </head>
   <body>
     <div class="formulario">
-      <form>
+      <form name="usuario" id="usuario" action="{% if editdata %}/update/{{editdata.id}}/{%else%}/createindb/{% endif %}" method="post">
+        {% csrf_token %}
         <label for="fname">Nome:</label><br />
-        <input type="text" id="form" name="fname" /><br />
+        <input type="text" id="form" name="Nome" value="{% if editdata %}{{editdata.Nome}}{% endif %}" /><br />
         <br />
         <label for="lidade">Idade:</label><br />
-        <input type="text" id="form" name="lidade" /> <br />
+        <input type="text" id="form" name="Idade" value="{% if editdata %}{{editdata.Idade}}{% endif %}"  /> <br />
         <br />
         <label for="lapelido">Apelido:</label><br />
-        <input type="text" id="form" name="lapelido" /> <br />
+        <input type="text" id="form" name="Apelido" value="{% if editdata %}{{editdata.Apelido}}{% endif %}"  /> <br />
         <br />
         <label for="lcargo">Cargo:</label><br />
-        <input type="text" id="form" name="lcargo" /> <br />
+        <input type="text" id="form" name="Cargo" value="{% if editdata %}{{editdata.Cargo}}{% endif %}"  /> <br />
         <br />
         <div id="divc">
-          <input type="submit" class="botao" />
+          <input type="submit" class="botao" value="Enviar" />
         </div>
       </form>
     </div>
