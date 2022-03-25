@@ -14,6 +14,20 @@
         font-family: sans-serif;
       }
 
+      header {
+        border-bottom: 1px solid #ff315d;
+        border-radius: 3px;
+        text-align: center;
+        color: #ff315d;
+      }
+
+      body {
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        background-color: #1c1a1e;
+      }
+
       .botao {
         border-radius: 5px;
         border: 2px solid #ff315d;
@@ -24,20 +38,54 @@
         margin-left: 10px;
         margin-right: 10px;
       }
+
+      .formulario {
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+        color: white;
+      }
+
+      #divc {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #form {
+        border-radius: 7px;
+        width: 300px;
+        height: 28px;
+      }
     </style>
+    <header>
+      <h1>GPLAYS</h1>
+    </header>
   </head>
   <body>
-    <form>
-      <label for="fname">Nome:</label><br />
-      <input type="text" id="fname" name="fname" /><br />
-      <label for="lname">Idade:</label><br />
-      <input type="text" id="lname" name="lname" />
-      <label for="lname">Apelido:</label><br />
-      <input type="text" id="lname" name="lname" />
-      <label for="lname">Cargo:</label><br />
-      <input type="text" id="lname" name="lname" />
-
-      <input type="submit" class="botao" />
-    </form>
+    <div class="formulario">
+      <form>
+        <label for="fname">Nome:</label><br />
+        <input type="text" id="form" name="fname" /><br />
+        <br />
+        <label for="lidade">Idade:</label><br />
+        <input type="text" id="form" name="lidade" /> <br />
+        <br />
+        <label for="lapelido">Apelido:</label><br />
+        <input type="text" id="form" name="lapelido" /> <br />
+        <br />
+        <label for="lcargo">Cargo:</label><br />
+        <input type="text" id="form" name="lcargo" /> <br />
+        <br />
+        <div id="divc">
+          <input type="submit" class="botao" />
+        </div>
+      </form>
+    </div>
   </body>
 </html>
