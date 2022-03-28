@@ -1,0 +1,17 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=gplays
+Group=www-data
+WorkingDirectory=/home/gplays/gplays-ics/gplays-backend
+ExecStart=/home/gplays/gplays-ics/gplays-env/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          gplayssettings.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,29 @@
+server {
+        listen 80;
+        server_name gplays.net www.gplays.net;
+
+	return 301 https://gplays.net$request_uri; # Redirect
+}
+
+server {
+
+	server_name gplays.net www.gplays.net;	
+	
+	location = /favicon.ico { access_log off; log_not_found off; }
+	location /static/ {
+		root /home/gplays/gplays-ics/gplays-backend;
+	}
+        location / {
+                include proxy_params;
+		proxy_pass http://unix:/run/gunicorn.sock;
+		proxy_redirect off;
+        }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/gplays.net/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/gplays.net/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
